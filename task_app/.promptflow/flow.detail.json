@@ -1,43 +1,43 @@
 {
   "flow_runs": [
     {
-      "run_id": "56e7b534-a468-43d0-add9-51bdd991b344_0",
+      "run_id": "b22adb83-bb26-403a-9d87-078056da8335_0",
       "status": "Completed",
       "error": null,
       "inputs": {
-        "question": "tomato"
+        "question": "order cake"
       },
       "output": {
-        "answer": "Saved 'Can you suggest some healthy and easy-to-prepare meal ideas for busy' to groceries.txt"
+        "answer": "Saved 'Call mom [/INST' to todo.txt"
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "56e7b534-a468-43d0-add9-51bdd991b344",
-      "root_run_id": "56e7b534-a468-43d0-add9-51bdd991b344",
+      "parent_run_id": "b22adb83-bb26-403a-9d87-078056da8335",
+      "root_run_id": "b22adb83-bb26-403a-9d87-078056da8335",
       "source_run_id": null,
       "flow_id": "default_flow_id",
-      "start_time": "2026-05-09T23:16:42.862512Z",
-      "end_time": "2026-05-09T23:16:45.263749Z",
+      "start_time": "2026-05-10T05:37:47.791265Z",
+      "end_time": "2026-05-10T05:37:50.207904Z",
       "index": 0,
       "api_calls": [
         {
           "name": "flow",
           "node_name": "flow",
           "type": "Flow",
-          "start_time": 1778393802.862512,
-          "end_time": 1778393805.263749,
+          "start_time": 1778416667.791265,
+          "end_time": 1778416670.207904,
           "children": [],
           "system_metrics": {
-            "duration": 2.401237,
+            "duration": 2.416639,
             "prompt_tokens": 0,
             "completion_tokens": 0,
             "total_tokens": 0
           },
           "inputs": {
-            "question": "tomato"
+            "question": "order cake"
           },
           "output": {
-            "answer": "Saved 'Can you suggest some healthy and easy-to-prepare meal ideas for busy' to groceries.txt"
+            "answer": "Saved 'Call mom [/INST' to todo.txt"
           },
           "error": null
         }
@@ -46,13 +46,13 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 2.401237,
+        "duration": 2.416639,
         "prompt_tokens": 0,
         "completion_tokens": 0,
         "total_tokens": 0
       },
       "result": {
-        "answer": "Saved 'Can you suggest some healthy and easy-to-prepare meal ideas for busy' to groceries.txt"
+        "answer": "Saved 'Call mom [/INST' to todo.txt"
       },
       "upload_metrics": false,
       "otel_trace_id": null,
@@ -62,18 +62,18 @@
   "node_runs": [
     {
       "node": "classify_intent",
-      "flow_run_id": "56e7b534-a468-43d0-add9-51bdd991b344",
-      "run_id": "56e7b534-a468-43d0-add9-51bdd991b344_classify_intent_0",
+      "flow_run_id": "b22adb83-bb26-403a-9d87-078056da8335",
+      "run_id": "b22adb83-bb26-403a-9d87-078056da8335_classify_intent_0",
       "status": "Completed",
       "inputs": {
-        "question": "tomato"
+        "question": "order cake"
       },
-      "output": "GROCERY: Can you suggest some healthy and easy-to-prepare meal ideas for busy",
+      "output": "Buy flowers for mom's birthday  TODO: Call mom [/INST",
       "metrics": null,
       "error": null,
-      "parent_run_id": "56e7b534-a468-43d0-add9-51bdd991b344_0",
-      "start_time": "2026-05-09T23:16:42.864098Z",
-      "end_time": "2026-05-09T23:16:45.259286Z",
+      "parent_run_id": "b22adb83-bb26-403a-9d87-078056da8335_0",
+      "start_time": "2026-05-10T05:37:47.792575Z",
+      "end_time": "2026-05-10T05:37:50.204813Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -83,25 +83,25 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 2.395188
+        "duration": 2.412238
       },
-      "result": "GROCERY: Can you suggest some healthy and easy-to-prepare meal ideas for busy",
+      "result": "Buy flowers for mom's birthday  TODO: Call mom [/INST",
       "message_format": "basic"
     },
     {
       "node": "process_task",
-      "flow_run_id": "56e7b534-a468-43d0-add9-51bdd991b344",
-      "run_id": "56e7b534-a468-43d0-add9-51bdd991b344_process_task_0",
+      "flow_run_id": "b22adb83-bb26-403a-9d87-078056da8335",
+      "run_id": "b22adb83-bb26-403a-9d87-078056da8335_process_task_0",
       "status": "Completed",
       "inputs": {
-        "intent_output": "GROCERY: Can you suggest some healthy and easy-to-prepare meal ideas for busy"
+        "intent_output": "Buy flowers for mom's birthday  TODO: Call mom [/INST"
       },
-      "output": "Saved 'Can you suggest some healthy and easy-to-prepare meal ideas for busy' to groceries.txt",
+      "output": "Saved 'Call mom [/INST' to todo.txt",
       "metrics": null,
       "error": null,
-      "parent_run_id": "56e7b534-a468-43d0-add9-51bdd991b344_0",
-      "start_time": "2026-05-09T23:16:45.260970Z",
-      "end_time": "2026-05-09T23:16:45.262412Z",
+      "parent_run_id": "b22adb83-bb26-403a-9d87-078056da8335_0",
+      "start_time": "2026-05-10T05:37:50.206762Z",
+      "end_time": "2026-05-10T05:37:50.207053Z",
       "index": 0,
       "api_calls": [],
       "cached_run_id": null,
@@ -111,9 +111,9 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.001442
+        "duration": 0.000291
       },
-      "result": "Saved 'Can you suggest some healthy and easy-to-prepare meal ideas for busy' to groceries.txt",
+      "result": "Saved 'Call mom [/INST' to todo.txt",
       "message_format": "basic"
     }
   ]

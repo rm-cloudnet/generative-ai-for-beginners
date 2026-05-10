@@ -21,3 +21,11 @@ def manage_tasks(intent_output: str):
         f.write(f"- {item}\n")
     
     return f"Saved '{item}' to {filename}"
+
+# Quick snippet to clean your text files if they get messy
+def clean_list(filename):
+    with open(filename, "r") as f:
+        lines = f.readlines()
+    clean_lines = [l for l in lines if l.strip().startswith("-")]
+    with open(filename, "w") as f:
+        f.writelines(clean_lines)

@@ -13,9 +13,10 @@ nodes:
   type: python
   source:
     type: code
-    path: classify.py  # Changed from .jinja2 to .py
+    path: classify.py
   inputs:
-    question: ${inputs.question}
+    # Use ${inputs.question} instead of ${question}
+    question: ${inputs.question} 
 
 - name: process_task
   type: python
@@ -23,9 +24,8 @@ nodes:
     type: code
     path: tasks.py
   inputs:
+    # References to other nodes use ${node_name.output}
     intent_output: ${classify_intent.output}
-
-
 
 
 

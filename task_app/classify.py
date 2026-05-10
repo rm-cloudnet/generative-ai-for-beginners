@@ -11,10 +11,16 @@ def classify_intent(question: str):
     client = InferenceClient(token=os.getenv("HUGGING_FACE_API_KEY"))
     model_id = "HuggingFaceH4/zephyr-7b-beta"
     
+    
+    # classify.py update
     messages = [
-        {"role": "system", "content": "Extract task. Format: 'GROCERY: item' or 'TODO: item'. Only output the format."},
-        {"role": "user", "content": question}
+    {"role": "system", "content": """Extract task. Format: 'GROCERY: item' or 'TODO: item'. 
+    If you are unsure or the request is ambiguous, respond ONLY with 'UNCERTAIN'."""},
+    {"role": "user", "content": question}
     ]
+
+
+
 
     response = client.chat_completion(
         messages=messages,
