@@ -1,0 +1,52 @@
+inputs:
+  question:
+    type: string
+    default: "I need to buy milk"
+
+outputs:
+  answer:
+    type: string
+    reference: ${process_task.output}
+
+nodes:
+- name: classify_intent
+  type: python
+  source:
+    type: code
+    path: classify.py  # Changed from .jinja2 to .py
+  inputs:
+    question: ${inputs.question}
+
+- name: process_task
+  type: python
+  source:
+    type: code
+    path: tasks.py
+  inputs:
+    intent_output: ${classify_intent.output}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
